@@ -12,17 +12,16 @@ class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
         ListNode *temp = head;
-        // temp -> next = head;
         int n = 0;
         while(temp != NULL){
             n++;
             temp = temp -> next;
         }
-        // cout<< n;
         int m = n/2 + 1;
         for(int i=0; i<m-1;i++){
             head = head -> next;
         }
         return head;
     }
+    // time complexity is O(n)+O(n/2)
 };
