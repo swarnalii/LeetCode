@@ -24,4 +24,17 @@ public:
         return head;
     }
     // time complexity is O(n)+O(n/2)
+    //Optimized solution
+//     class Solution {
+//     public:
+//         ListNode* middleNode(ListNode* head) {
+//             ListNode *slow = head, *fast = head;
+//             while( fast != NULL and fast->next != NULL){
+//                 slow = slow->next;
+//                 fast = fast->next->next;
+//             }
+//             return slow;
+//             // time complexity is O(n/2)
+//         }
+//     };
 };
