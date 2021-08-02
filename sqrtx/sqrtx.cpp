@@ -16,4 +16,5 @@ public:
         }
         return left-1;
     }
+    //time complexity is O(logn) since binary search is usesd
 };
