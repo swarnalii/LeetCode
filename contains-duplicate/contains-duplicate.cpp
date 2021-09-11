@@ -7,10 +7,11 @@ public:
         if(n > m)
             return true;
         else return false;
-//         wrong sol
+        
+//         using unordered map
 //         unordered_map<int, int> mp;
 //         for(auto i : nums){
-//             mp[nums[i]]++;
+//             mp[i]++;
 //         }
         
 //         bool chk = false;
