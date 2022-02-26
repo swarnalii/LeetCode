@@ -42,9 +42,10 @@ public:
         //find the middle of the linked list
         while(fast!=NULL && fast->next!=NULL)
         {
-            if(temp == NULL)
-                temp = slow;
-            else temp = temp -> next;
+            // if(temp == NULL)
+            //     temp = slow;
+            // else temp = temp -> next;
+            temp = slow;
             slow=slow->next;
             fast=fast->next->next;
             
