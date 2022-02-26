@@ -14,7 +14,7 @@ public:
     {
      if(!l1)
           return l2;
-     if(!l2)
+      if(!l2)
           return l1;
     if(l1->val<l2->val)
     {
@@ -26,14 +26,11 @@ public:
         l2->next=mergeTwoLists(l2->next,l1);
         return l2;
     }
-     
-    
     }
+    
     ListNode* sortList(ListNode* head) {
-        
         if (!head || !head->next)
             return head;
-        
        //use merge sort to decrease complexity
         ListNode* temp=NULL ;
         ListNode* slow=head ;
@@ -42,10 +39,7 @@ public:
         //find the middle of the linked list
         while(fast!=NULL && fast->next!=NULL)
         {
-            // if(temp == NULL)
-            //     temp = slow;
-            // else temp = temp -> next;
-            temp = slow;
+            temp=slow;
             slow=slow->next;
             fast=fast->next->next;
             
@@ -56,6 +50,6 @@ public:
         ListNode* l1= sortList(head);
         ListNode* l2= sortList(slow); //sort second half
         
-        return mergeTwoLists(l1,l2);
+        return mergeTwoLists(l1,l2);     
     }
 };
